@@ -6,7 +6,68 @@ using System.Threading.Tasks;
 
 namespace Cuadriláteros.Modelo
 {
-    internal class Cuadrilatero
+    public abstract class Cuadrilatero
     {
+        private float[] vertice_1;
+        private float[] vertice_2;
+        private float[] vertice_3;
+        private float[] vertice_4;
+
+        // Constructor de la clase.
+        public Cuadrilatero()
+        {
+            vertice_1 = new float[2];
+            vertice_2 = new float[2];
+            vertice_3 = new float[2];
+            vertice_4 = new float[2];
+        }
+
+        public float[] Vertice_1 
+        {
+            get
+            {
+                return vertice_1;
+            }
+            set
+            {
+                vertice_1 = value;
+            }
+        }
+
+        public float[] Vertice_2
+        {
+            get
+            {
+                return vertice_2;
+            }
+            set
+            {
+                vertice_2 = value;
+            }
+        }
+
+        public float[] Vertice_3
+        {
+            get
+            {
+                return vertice_3;
+            }
+            set
+            {
+                vertice_3 = value;
+            }
+        }
+
+        public float[] Vertice_4
+        {
+            get
+            {
+                return vertice_4;
+            }
+            set
+            {
+                vertice_4 = value;
+            }
+        }
     }
 }
