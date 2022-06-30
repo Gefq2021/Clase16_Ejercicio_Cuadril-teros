@@ -69,5 +69,7 @@ namespace Cuadriláteros.Modelo
                 vertice_4 = value;
             }
         }
+
+        public abstract double Area();
     }
 }
