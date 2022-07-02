@@ -70,6 +70,6 @@ namespace Cuadriláteros.Modelo
             }
         }
 
-        public abstract double Area();
+        public abstract double CalcularArea();
     }
 }
