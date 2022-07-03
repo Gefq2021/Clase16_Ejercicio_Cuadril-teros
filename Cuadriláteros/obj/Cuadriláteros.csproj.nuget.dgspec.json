@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj": {}
+    "F:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj": {}
   },
   "projects": {
-    "G:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj": {
+    "F:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj",
+        "projectUniqueName": "F:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj",
         "projectName": "Cuadriláteros",
-        "projectPath": "G:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj",
-        "packagesPath": "C:\\Users\\QUISPE\\.nuget\\packages\\",
-        "outputPath": "G:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\obj\\",
+        "projectPath": "F:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\Cuadriláteros.csproj",
+        "packagesPath": "C:\\Users\\GFQ84\\.nuget\\packages\\",
+        "outputPath": "F:\\CURSO INTRODUCCION A .NET 6.0\\Clase16\\Clase16_Ejercicio_Cuadriláteros\\Cuadriláteros\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\QUISPE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GFQ84\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

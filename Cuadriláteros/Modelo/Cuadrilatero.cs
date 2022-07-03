@@ -71,5 +71,10 @@ namespace Cuadriláteros.Modelo
         }
 
         public abstract double CalcularArea();
+
+        public double CalcularPerimetro(float[] punto1, float[] punto2)
+        {
+            return Math.Sqrt(Math.Pow(punto2[0] - punto1[0], 2) + Math.Pow(punto2[1] - punto1[1], 2));
+        }
     }
 }
