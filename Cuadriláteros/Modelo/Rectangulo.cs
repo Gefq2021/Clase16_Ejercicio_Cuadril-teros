@@ -15,9 +15,10 @@ namespace Cuadriláteros.Modelo
 
         public override double CalcularArea()
         {
-            double area = 0;
+            double ladoA = CalcularDistancia(Vertice_1, Vertice_2);
+            double ladoB = CalcularDistancia(Vertice_2, Vertice_3);
 
-            return area;
+            return ladoA * ladoB;
         }
     }
 }
