@@ -85,12 +85,23 @@ namespace Cuadriláteros.Modelo
             List<float[]> vertices = new List<float[]>() { Vertice_1, Vertice_2, Vertice_3, Vertice_4 };
             List<float> puntos = new List<float>();
 
-            if (true)
-            {
+            int cantLados = EliminarRepetidos(CalcularLados(vertices)).Count;
+            int cantPendiente = EliminarRepetidos(CalcularPendiente(vertices)).Count;
 
+            if (cantLados == 1 && cantPendiente == 2)
+            {
+                return true;
+            }
+            else if (cantPendiente == 2 && cantPendiente == 2)
+            {
+                return true;
+            }
+            else if (cantLados >= 3 && cantPendiente >= 2)
+            {
+                return true;
             }
 
-            return true;
+            return false;
         }
         
         // Creamos una lista con los lados generados por las coordenadas
@@ -109,9 +120,9 @@ namespace Cuadriláteros.Modelo
 
         // Creamos una lista con las pendientes de las rectas formadas
         // por los puntos ingresados
-        private List<float> CalcularPendiente(List<float[]> vertices)
+        private List<double> CalcularPendiente(List<float[]> vertices)
         {
-            List<float> puntos = new List<float>();
+            List<double> puntos = new List<double>();
 
             puntos.Add(Pendiente(vertices[0], vertices[1]));
             puntos.Add(Pendiente(vertices[1], vertices[2]));
@@ -131,7 +142,7 @@ namespace Cuadriláteros.Modelo
         }
 
         // Eliminamos los elementos repetidos de una coleccion
-        private void EliminarRepetidos(List<double> lista)
+        private List<double> EliminarRepetidos(List<double> lista)
         {
             for (int i = 0; i < lista.Count; i++)
             {
@@ -143,6 +154,7 @@ namespace Cuadriláteros.Modelo
                     }
                 }
             }
+            return lista;
         }
     }
 }
