@@ -19,7 +19,7 @@ namespace Cuadriláteros.Modelo
             double ladoC = CalcularDistancia(Vertice_3, Vertice_4);
             double ladoD = CalcularDistancia(Vertice_4, Vertice_1);
 
-            double area = ((ladoA + ladoB) / 2) * Math.Sqrt(Math.Pow(ladoC, 2) - Math.Pow((Math.Pow(ladoC,2) - Math.Pow(ladoD,2) + Math.Pow(ladoA - ladoB,2)) / (2 * (ladoA - ladoB)),2));
+            double area = ((ladoD + ladoB) / 2) * Math.Sqrt(Math.Pow(ladoA, 2) - Math.Pow((Math.Pow(ladoA,2) - Math.Pow(ladoC,2) + Math.Pow(ladoD - ladoB,2)) / (2 * (ladoD - ladoB)),2));
 
             return area;
         }
