@@ -16,7 +16,7 @@ namespace Cuadriláteros.Modelo
         // Constructor de la clase.
         public Cuadrilatero()
         {
-            vertice_1 = new float[2] {0, 0};
+            vertice_1 = new float[2] { 0, 0 };
             vertice_2 = new float[2] { 0, 0 };
             vertice_3 = new float[2] { 0, 0 };
             vertice_4 = new float[2] { 0, 0 };
@@ -80,7 +80,7 @@ namespace Cuadriláteros.Modelo
 
         // Comprobamos si los puntos Ingresados forman un Cuadrilatero.
         // En este caso serian Trapecio, Rectangulo y Cuadrado
-        public bool EsUnCuadrilatero()
+        public bool EsUnCuadrilatero(string figura)
         {
             List<float[]> vertices = new List<float[]>() { Vertice_1, Vertice_2, Vertice_3, Vertice_4 };
             List<float> puntos = new List<float>();
@@ -88,15 +88,19 @@ namespace Cuadriláteros.Modelo
             int cantLados = EliminarRepetidos(CalcularLados(vertices)).Count;
             int cantPendiente = EliminarRepetidos(CalcularPendiente(vertices)).Count;
 
-            if (cantLados == 1 && cantPendiente == 2)
+            Console.WriteLine($"Cantidad de lados: {cantLados}");
+            Console.WriteLine($"Cantidad de pendientes: {cantPendiente}");
+
+            if (figura.ToUpper() == "CUADRADO" && cantLados == 1 && cantPendiente == 2)
             {
                 return true;
             }
-            else if (cantPendiente == 2 && cantPendiente == 2)
+            else if (figura.ToUpper() == "RECTANGULO" && cantLados == 2 && cantPendiente == 2)
             {
                 return true;
             }
-            else if (cantLados >= 3 && cantLados <= 4 && cantPendiente >= 2 && cantPendiente <= 3)
+            else if (figura.ToUpper() == "TRAPECIO" && cantLados >= 3 && cantLados <= 4 
+                     && cantPendiente >= 2 && cantPendiente <= 3)
             {
                 return true;
             }
@@ -137,20 +141,22 @@ namespace Cuadriláteros.Modelo
         {
 
             float m = ((p2[1] - p1[1]) / (p2[0] - p1[0]));
-
+            
+            if (m == (-1.0f / 0.0f)) // A los -infinito, remplazamos por +infinito
+                m = (1.0f / 0.0f);
             return m;
         }
 
         // Eliminamos los elementos repetidos de una coleccion
         private List<double> EliminarRepetidos(List<double> lista)
         {
-            for (int i = 0; i < lista.Count; i++)
+            for (int i = 0; i < lista.Count - 1; i++)
             {
-                for (int j = i + 1; j < lista.Count; j++)
+                for (int j = lista.Count - 1; j > i; j--)
                 {
                     if (lista[i] == lista[j])
                     {
-                        lista.Remove(lista[j]);
+                        lista.RemoveAt(j);
                     }
                 }
             }
