@@ -96,7 +96,7 @@ namespace Cuadriláteros.Modelo
             {
                 return true;
             }
-            else if (cantLados >= 3 && cantPendiente >= 2)
+            else if (cantLados >= 3 && cantLados <= 4 && cantPendiente >= 2 && cantPendiente <= 3)
             {
                 return true;
             }
