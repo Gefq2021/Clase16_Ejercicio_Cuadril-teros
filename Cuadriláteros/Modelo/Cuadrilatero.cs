@@ -8,26 +8,67 @@ namespace Cuadriláteros.Modelo
 {
     public abstract class Cuadrilatero
     {
-        private List<float[]> vertices;
+        private float[] vertice_1;
+        private float[] vertice_2;
+        private float[] vertice_3;
+        private float[] vertice_4;
 
         // Constructor de la clase.
         public Cuadrilatero()
         {
-            vertices = new List<float[]>();
+            vertice_1 = new float[2] {0, 0};
+            vertice_2 = new float[2] { 0, 0 };
+            vertice_3 = new float[2] { 0, 0 };
+            vertice_4 = new float[2] { 0, 0 };
         }
 
-        public List<float[]> Vertices
+        public float[] Vertice_1 
         {
             get
             {
-                return vertices;
+                return vertice_1;
             }
             set
             {
-                vertices = value;
+                vertice_1 = value;
             }
         }
 
+        public float[] Vertice_2
+        {
+            get
+            {
+                return vertice_2;
+            }
+            set
+            {
+                vertice_2 = value;
+            }
+        }
+
+        public float[] Vertice_3
+        {
+            get
+            {
+                return vertice_3;
+            }
+            set
+            {
+                vertice_3 = value;
+            }
+        }
+
+        public float[] Vertice_4
+        {
+            get
+            {
+                return vertice_4;
+            }
+            set
+            {
+                vertice_4 = value;
+            }
+        }
 
         public abstract double CalcularArea();
 
@@ -41,7 +82,7 @@ namespace Cuadriláteros.Modelo
         // En este caso serian Trapecio, Rectangulo y Cuadrado
         public bool EsUnCuadrilatero()
         {
-            //List<float[]> vertices = new List<float[]>() { Vertice_1, Vertice_2, Vertice_3, Vertice_4 };
+            List<float[]> vertices = new List<float[]>() { Vertice_1, Vertice_2, Vertice_3, Vertice_4 };
             List<float> puntos = new List<float>();
 
             int cantLados = EliminarRepetidos(CalcularLados(vertices)).Count;
