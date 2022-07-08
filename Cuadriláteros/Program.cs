@@ -26,39 +26,6 @@
 
 using Cuadriláteros.Modelo;
 
-// Trapecio
-//Trapecio trapecio1 = new Trapecio();
-//trapecio1.Vertice_1[0] = 0;
-//trapecio1.Vertice_1[1] = 0;
-//trapecio1.Vertice_2[0] = 1;
-//trapecio1.Vertice_2[1] = 3;
-//trapecio1.Vertice_3[0] = 3;
-//trapecio1.Vertice_3[1] = 3;
-//trapecio1.Vertice_4[0] = 4;
-//trapecio1.Vertice_4[1] = 0;
-
-//Console.WriteLine($"El Area del Trapecio es {trapecio1.CalcularArea()}");
-//Console.WriteLine();
-
-// Rectangulo
-//Rectangulo rectangulo1 = new Rectangulo();
-//rectangulo1.Vertice_1[0] = 0;
-//rectangulo1.Vertice_1[1] = 0;
-//rectangulo1.Vertice_2[0] = 0;
-//rectangulo1.Vertice_2[1] = 3;
-//rectangulo1.Vertice_3[0] = 4;
-//rectangulo1.Vertice_3[1] = 3;
-//Console.WriteLine($"El Area del Rectangulo es {rectangulo1.CalcularArea()}");
-//Console.WriteLine();
-
-// Cuadrado
-//Cuadrado cuadrado1 = new Cuadrado();
-//cuadrado1.Vertice_1[0] = 0;
-//cuadrado1.Vertice_1[1] = 0;
-//cuadrado1.Vertice_2[0] = 0;
-//cuadrado1.Vertice_2[1] = 3;
-//Console.WriteLine($"El Area del Cuadrado es {cuadrado1.CalcularArea()}");
-
 int opc;
 
 do
@@ -80,7 +47,7 @@ do
             Console.WriteLine("Ingrese los Vertices del TRAPECIO:");
             cargarPuntos(trapecio);
 
-            if (trapecio.EsUnCuadrilatero())
+            if (trapecio.EsUnCuadrilatero("TRAPECIO"))
                 Console.WriteLine($"El Area del TRAPECIO es: {trapecio.CalcularArea()}");
             else
                 Console.WriteLine("Los puntos ingresados no corresponden a un TRAPECIO");
@@ -94,7 +61,7 @@ do
             Console.WriteLine("Ingrese los Vertices del RECTANGULO:");
             cargarPuntos(rectangulo);
 
-            if (rectangulo.EsUnCuadrilatero())
+            if (rectangulo.EsUnCuadrilatero("RECTANGULO"))
                 Console.WriteLine($"El Area del RECTANGULO es: {rectangulo.CalcularArea()}");
             else
                 Console.WriteLine("Los puntos ingresados no corresponden a un RECTANGULO...");
@@ -108,7 +75,7 @@ do
             Console.WriteLine("Ingrese los Vertices del CUADRADO:");
             cargarPuntos(cuadrado);
 
-            if (cuadrado.EsUnCuadrilatero())
+            if (cuadrado.EsUnCuadrilatero("CUADRADO"))
                 Console.WriteLine($"El Area del CUADRADO es: {cuadrado.CalcularArea()}");
             else
                 Console.WriteLine("Los puntos ingresados no corresponden a un CUADRADO...");
